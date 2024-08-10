@@ -1,7 +1,9 @@
 import { reasonsToLove } from "../constants/constants";
 
 const getReasonToLove = () => {
-  return reasonsToLove[Math.floor(Math.random() * reasonsToLove.length)];
+  const index = Math.floor(Math.random() * reasonsToLove.length);
+  const reasonToLove = reasonsToLove[index];
+  return reasonToLove;
 };
 
 export default getReasonToLove;

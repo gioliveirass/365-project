@@ -162,3 +162,8 @@ html {
 .container button:hover span {
   animation-play-state: paused;
 }
+
+.modal {
+  margin: 2rem 1rem;
+  text-align: center;
+}
