@@ -1,11 +1,19 @@
 import { useState } from "react";
 import { Modal } from "react-responsive-modal";
+
 import "react-responsive-modal/styles.css";
+import getReasonToLove from "./utils/getReason.util";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [reasonToLove, setReasonToLove] = useState("");
 
-  const onOpenModal = () => setIsModalOpen(true);
+  const onOpenModal = () => {
+    const newReasonToLove = getReasonToLove();
+    setReasonToLove(newReasonToLove);
+    setIsModalOpen(true);
+  };
+
   const onCloseModal = () => setIsModalOpen(false);
 
   return (
@@ -28,7 +36,7 @@ function App() {
       </div>
 
       <Modal open={isModalOpen} onClose={onCloseModal} center>
-        <p>Simple centered modal</p>
+        <p>{reasonToLove}</p>
       </Modal>
     </>
   );
