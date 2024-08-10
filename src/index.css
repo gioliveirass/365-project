@@ -1,6 +1,5 @@
 :root {
   background-color: #201726;
-  color: #ffffff;
   font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
 }
@@ -14,7 +13,8 @@ html {
   align-items: center;
 }
 
-p {
+.container p {
+  color: #ffffff;
   margin: 1rem;
 }
 
@@ -42,11 +42,11 @@ p {
   font-size: 2rem;
 }
 
-.button {
+.container .button {
   margin-top: 1.5rem;
 }
 
-button {
+.container button {
   width: 200px;
   height: 70px;
   background: linear-gradient(to left top, #b6b0d9 50%, #cfc9f2 50%);
@@ -64,11 +64,13 @@ button {
   transition: all 0.5s;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 }
-button span {
+
+.container button span {
   position: absolute;
   display: block;
 }
-button span:nth-child(1) {
+
+.container button span:nth-child(1) {
   height: 3px;
   width: 200px;
   top: 0px;
@@ -88,7 +90,8 @@ button span:nth-child(1) {
     left: 200px;
   }
 }
-button span:nth-child(2) {
+
+.container button span:nth-child(2) {
   height: 70px;
   width: 3px;
   top: -70px;
@@ -99,6 +102,7 @@ button span:nth-child(2) {
   animation: span2 2s linear infinite;
   animation-delay: 2s;
 }
+
 @keyframes span2 {
   0% {
     top: -70px;
@@ -107,7 +111,8 @@ button span:nth-child(2) {
     top: 70px;
   }
 }
-button span:nth-child(3) {
+
+.container button span:nth-child(3) {
   height: 3px;
   width: 200px;
   right: -200px;
@@ -118,6 +123,7 @@ button span:nth-child(3) {
   animation: span3 2s linear infinite;
   animation-delay: 3s;
 }
+
 @keyframes span3 {
   0% {
     right: -200px;
@@ -127,7 +133,7 @@ button span:nth-child(3) {
   }
 }
 
-button span:nth-child(4) {
+.container button span:nth-child(4) {
   height: 70px;
   width: 3px;
   bottom: -70px;
@@ -138,6 +144,7 @@ button span:nth-child(4) {
   animation: span4 2s linear infinite;
   animation-delay: 4s;
 }
+
 @keyframes span4 {
   0% {
     bottom: -70px;
@@ -147,11 +154,11 @@ button span:nth-child(4) {
   }
 }
 
-button:hover {
+.container button:hover {
   transition: all 0.5s;
   transform: rotate(-3deg) scale(1.1);
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
 }
-button:hover span {
+.container button:hover span {
   animation-play-state: paused;
 }

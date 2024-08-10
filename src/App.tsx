@@ -1,4 +1,13 @@
+import { useState } from "react";
+import { Modal } from "react-responsive-modal";
+import "react-responsive-modal/styles.css";
+
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const onOpenModal = () => setIsModalOpen(true);
+  const onCloseModal = () => setIsModalOpen(false);
+
   return (
     <>
       <div className="container">
@@ -7,7 +16,7 @@ function App() {
         <p className="text-type-three">amar a</p>
         <p className="text-type-four">Meizinha</p>
 
-        <div className="button">
+        <div className="button" onClick={onOpenModal}>
           <button>
             Clique aqui
             <span></span>
@@ -17,6 +26,10 @@ function App() {
           </button>
         </div>
       </div>
+
+      <Modal open={isModalOpen} onClose={onCloseModal} center>
+        <p>Simple centered modal</p>
+      </Modal>
     </>
   );
 }
