@@ -15,7 +15,7 @@ const getReasonToLove = () => {
   const reasonToLove = editableReasonsToLove[index];
 
   editableReasonsToLove = editableReasonsToLove.filter(
-    (reason, arrayPosition) => index !== arrayPosition
+    (_reason, arrayPosition) => index !== arrayPosition
   );
 
   handleLocalStorageUtil.updateReasonsToLove(editableReasonsToLove);
